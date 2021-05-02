@@ -1,6 +1,9 @@
 package ui;
 
-import model.*;
+import model.BFGame;
+import model.Bunny;
+import model.Carrot;
+import model.Sock;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -14,6 +17,7 @@ public class GamePanel extends JPanel {
     private static final String OVER = "Game over!";
     private static final String TY = "Thank you for playing Bunny Feeder ❤";
     private static final String REPLAY = "Press ⓡ to replay";
+    private static final String LEVEL = "Please choose a level of difficulty";
 
     private BFGame game;
     BufferedImage imgBunny = null;
@@ -54,7 +58,7 @@ public class GamePanel extends JPanel {
     private void drawBunny(Graphics g) {
         Bunny b = game.getBunny();
         try {
-            imgBunny = ImageIO.read(getClass().getResource("bunny.png"));
+            imgBunny = ImageIO.read(getClass().getResource("pixelBunny.png"));
             g.drawImage(imgBunny, b.getPosX(), b.Y_POS, null);
         } catch (IOException e) {
             e.printStackTrace();
@@ -104,7 +108,7 @@ public class GamePanel extends JPanel {
     private void gameOver(Graphics g) {
         Color saved = g.getColor();
         g.setColor(new Color(67, 70, 70));
-        g.setFont(new Font("Serif", 20, 20));
+        g.setFont(new Font("Calibri", 20, 20));
         FontMetrics fm = g.getFontMetrics();
         centreString(OVER, g, fm, BFGame.HEIGHT / 2);
         centreString(TY, g, fm, BFGame.HEIGHT / 2 + 25);

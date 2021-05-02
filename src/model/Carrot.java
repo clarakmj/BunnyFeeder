@@ -6,8 +6,8 @@ import java.awt.*;
 public class Carrot extends GameItem {
 
     public static final int FULLNESS_PER_CARROT = 10;
-    private static final int width = 73;
-    private static final int height = 28;
+    private static final int width = 85;
+    private static final int height = 79;
 
     private Bunny bunny;
 

@@ -6,8 +6,8 @@ import java.awt.*;
 public class Sock extends GameItem {
 
     private Bunny bunny;
-    private static final int width = 45;
-    private static final int height = 43;
+    private static final int width = 48;
+    private static final int height = 49;
 
     // EFFECTS: constructs a sock at (x, y)
     public Sock(int x, int y) {

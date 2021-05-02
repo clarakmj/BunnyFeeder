@@ -14,8 +14,8 @@ public class Bunny implements Saveable {
     public static final int MAX_FULLNESS = 100;
     public static final int Y_POS = BFGame.HEIGHT - 120;
     public static final int DX = 3;
-    private static final int width = 86;
-    private static final int height = 113;
+    private static final int width = 142;
+    private static final int height = 124;
 
     private int posX;
     private int direction;
@@ -120,8 +120,8 @@ public class Bunny implements Saveable {
         if (posX < 0) {
             posX = 0;
         }
-        if (posX > BFGame.WIDTH - 85) {
-            posX = BFGame.WIDTH - 85;
+        if (posX > BFGame.WIDTH - 143) {
+            posX = BFGame.WIDTH - 143;
         }
     }
 
